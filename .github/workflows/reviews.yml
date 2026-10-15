@@ -5,6 +5,8 @@ on:
     - cron: "17 */6 * * *" # every 6 hours
   workflow_dispatch:
 
+concurrency: reviews
+
 permissions:
   contents: write
 
