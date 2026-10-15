@@ -19,8 +19,10 @@ jobs:
         with:
           node-version: 22
       - run: npm ci || npm i
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chrome
       - run: node scripts/fetch-reviews.mjs
+        env:
+          CHROME_CHANNEL: chrome
       - name: Commit if changed
         run: |
           git diff --quiet && exit 0

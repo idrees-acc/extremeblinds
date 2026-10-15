@@ -6,7 +6,7 @@ import { writeFileSync, readFileSync } from "node:fs";
 const LISTING = "https://jsdl.in/DT-43YEA226QIA";
 const OUT = new URL("../data/reviews.json", import.meta.url);
 
-const browser = await chromium.launch({ channel: process.env.CHROME_CHANNEL || undefined });
+const browser = await chromium.launch({ channel: process.env.CHROME_CHANNEL || undefined, args: ["--disable-http2"] });
 const page = await browser.newPage({
   userAgent:
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
