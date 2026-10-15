@@ -1,5 +1,5 @@
 // Pulls rating + reviews from our JustDial listing into data/reviews.json.
-// Run by .github/workflows/reviews.yml on a schedule; also runnable locally: node scripts/fetch-reviews.mjs
+// Run weekly on a Mac by scripts/refresh-reviews.sh (JustDial blocks cloud servers); also: npm run reviews
 import { chromium } from "playwright";
 import { writeFileSync, readFileSync } from "node:fs";
 

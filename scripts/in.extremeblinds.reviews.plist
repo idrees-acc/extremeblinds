@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Install: cp scripts/in.extremeblinds.reviews.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/in.extremeblinds.reviews.plist -->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>in.extremeblinds.reviews</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/idreestarwadi/Documents/extremeblinds/scripts/refresh-reviews.sh</string>
+  </array>
+  <!-- Every Monday 10:30. If the Mac is asleep then, it runs on wake. -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>1</integer>
+    <key>Hour</key>
+    <integer>10</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>/Users/idreestarwadi/Library/Logs/extremeblinds-reviews.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/idreestarwadi/Library/Logs/extremeblinds-reviews.log</string>
+</dict>
+</plist>
