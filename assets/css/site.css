@@ -28,7 +28,8 @@ h2 { font-size: clamp(40px, 5vw, 80px); line-height: 0.95; }
 
 /* Nav */
 .nav { height: 66px; position: sticky; top: 0; z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 18px var(--pad); background: #f3ede4d9; backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-.logo { font: 600 22px var(--serif); letter-spacing: -0.02em; }
+.logo { font: 600 22px var(--serif); letter-spacing: -0.02em; white-space: nowrap; }
+.logo .mark { display: inline-block; width: 31px; height: 30px; margin-right: 10px; vertical-align: -6px; }
 .logo span { color: var(--acc); font-style: italic; font-weight: 400; }
 .nav ul { display: flex; gap: 36px; list-style: none; padding: 0; font-size: 15px; }
 .nav ul a { position: relative; }

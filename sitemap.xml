@@ -1,7 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://extremeblinds.in/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-19</lastmod>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-linen-sitout.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-peacock-garden.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-peacock-feather.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-kids-village.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-mataji.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-temple.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/printed-mandir-swaminarayan.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/zebra-arch.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/bamboo-bedroom.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-blackout-living.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-dim-lounge.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-damask-bedroom.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-grey-living.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://extremeblinds.in/assets/work/roller-sand-office.jpg</image:loc>
+    </image:image>
   </url>
 </urlset>
