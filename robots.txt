@@ -1,6 +1,5 @@
 # Search engines and AI assistants are welcome to read, index and cite this site.
 User-agent: *
 Allow: /
-Content-Signal: search=yes, ai-input=yes
 
 Sitemap: https://extremeblinds.in/sitemap.xml

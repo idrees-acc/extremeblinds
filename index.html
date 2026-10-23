@@ -35,17 +35,13 @@
     <link
       rel="preload"
       as="image"
-      href="assets/work/800/roller-linen-sitout.jpg"
-      imagesrcset="assets/work/800/roller-linen-sitout.jpg 800w, assets/work/roller-linen-sitout.jpg 1400w"
+      href="assets/work/800/roller-linen-sitout.webp"
+      imagesrcset="assets/work/800/roller-linen-sitout-sm.webp 400w, assets/work/800/roller-linen-sitout.webp 800w, assets/work/roller-linen-sitout.webp 1400w"
       imagesizes="(max-width: 960px) 100vw, 45vw"
       fetchpriority="high"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Outfit:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/web/fraunces-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="assets/fonts/web/fraunces-italic-latin.woff2" crossorigin />
     <link rel="stylesheet" href="assets/css/site.css" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary" />
     <script>
@@ -55,12 +51,15 @@
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       if (!GA_ID.includes("XXXX")) {
-        const s = document.createElement("script");
-        s.async = true;
-        s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-        document.head.append(s);
         gtag("js", new Date());
         gtag("config", GA_ID);
+        // Fetch gtag.js after the page has loaded so it doesn't compete with the hero; queued calls replay then.
+        addEventListener("load", () => {
+          const s = document.createElement("script");
+          s.async = true;
+          s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+          document.head.append(s);
+        });
       }
     </script>
     <script type="application/ld+json">
@@ -360,15 +359,15 @@
         <div class="stack">
           <figure class="s1 slats">
             <img width="800" height="451"
-              src="assets/work/800/roller-linen-sitout.jpg"
-              srcset="assets/work/800/roller-linen-sitout.jpg 800w, assets/work/roller-linen-sitout.jpg 1400w"
+              src="assets/work/800/roller-linen-sitout.webp"
+              srcset="assets/work/800/roller-linen-sitout-sm.webp 400w, assets/work/800/roller-linen-sitout.webp 800w, assets/work/roller-linen-sitout.webp 1400w"
               sizes="(max-width: 960px) 100vw, 45vw"
               alt="Linen roller blinds across a sit-out window with potted plants"
               fetchpriority="high"
             />
           </figure>
           <figure class="s2">
-            <img width="451" height="800" src="assets/work/800/printed-peacock-feather.jpg" alt="Custom-printed peacock-feather blind in a marigold-framed mandir" />
+            <img width="451" height="800" src="assets/work/800/printed-peacock-feather.webp" srcset="assets/work/800/printed-peacock-feather-sm.webp 225w, assets/work/800/printed-peacock-feather.webp 451w" sizes="(max-width: 960px) 46vw, 22vw" alt="Custom-printed peacock-feather blind in a marigold-framed mandir" />
           </figure>
           <div class="badge"><div><b>450</b>installs<br />&amp; counting</div></div>
         </div>
@@ -402,8 +401,8 @@
             </p>
           </div>
           <div class="pics">
-            <img width="451" height="800" src="assets/work/800/printed-peacock-garden.jpg" alt="Printed blind of a Mughal-style garden with peacocks" loading="lazy" />
-            <img width="800" height="451" src="assets/work/800/printed-kids-village.jpg" alt="Printed kids' room blind with houses and hot-air balloons" loading="lazy" />
+            <img width="451" height="800" src="assets/work/800/printed-peacock-garden.webp" srcset="assets/work/800/printed-peacock-garden-sm.webp 225w, assets/work/800/printed-peacock-garden.webp 451w" sizes="(max-width: 960px) 100vw, 40vw" alt="Printed blind of a Mughal-style garden with peacocks" loading="lazy" />
+            <img width="800" height="451" src="assets/work/800/printed-kids-village.webp" srcset="assets/work/800/printed-kids-village-sm.webp 400w, assets/work/800/printed-kids-village.webp 800w" sizes="(max-width: 960px) 100vw, 40vw" alt="Printed kids' room blind with houses and hot-air balloons" loading="lazy" />
           </div>
         </article>
         <article class="row flip reveal">
@@ -413,8 +412,8 @@
             <p>Fabrics you want to touch. Soft filtered light in the day, full privacy at night.</p>
           </div>
           <div class="pics">
-            <img width="600" height="800" src="assets/work/800/zebra-arch.jpg" alt="Zebra blind fitted inside a carved jaali arch" loading="lazy" />
-            <img width="800" height="600" src="assets/work/800/bamboo-bedroom.jpg" alt="Natural bamboo blind in a bedroom" loading="lazy" />
+            <img width="600" height="800" src="assets/work/800/zebra-arch.webp" srcset="assets/work/800/zebra-arch-sm.webp 300w, assets/work/800/zebra-arch.webp 600w" sizes="(max-width: 960px) 100vw, 40vw" alt="Zebra blind fitted inside a carved jaali arch" loading="lazy" />
+            <img width="800" height="600" src="assets/work/800/bamboo-bedroom.webp" srcset="assets/work/800/bamboo-bedroom-sm.webp 400w, assets/work/800/bamboo-bedroom.webp 800w" sizes="(max-width: 960px) 100vw, 40vw" alt="Natural bamboo blind in a bedroom" loading="lazy" />
           </div>
         </article>
         <article class="row reveal">
@@ -424,8 +423,8 @@
             <p>Wide spans in living rooms, lounges and offices, blackout or dim-out, aligned to the millimetre.</p>
           </div>
           <div class="pics">
-            <img width="800" height="600" src="assets/work/800/roller-blackout-living.jpg" alt="Three white roller blinds across a living-room wall" loading="lazy" />
-            <img width="800" height="600" src="assets/work/800/roller-dim-lounge.jpg" alt="Grey dim-out roller blinds in a lounge with chess tables" loading="lazy" />
+            <img width="800" height="600" src="assets/work/800/roller-blackout-living.webp" srcset="assets/work/800/roller-blackout-living-sm.webp 400w, assets/work/800/roller-blackout-living.webp 800w" sizes="(max-width: 960px) 100vw, 40vw" alt="Three white roller blinds across a living-room wall" loading="lazy" />
+            <img width="800" height="600" src="assets/work/800/roller-dim-lounge.webp" srcset="assets/work/800/roller-dim-lounge-sm.webp 400w, assets/work/800/roller-dim-lounge.webp 800w" sizes="(max-width: 960px) 100vw, 40vw" alt="Grey dim-out roller blinds in a lounge with chess tables" loading="lazy" />
           </div>
         </article>
       </section>
@@ -493,34 +492,34 @@
           <button class="chip" data-filter="other" aria-pressed="false">Vertical, monsoon &amp; more</button>
         </div>
         <div class="grid">
-          <figure data-cat="printed"><img width="600" height="800" loading="lazy" src="assets/work/800/printed-mataji.jpg" alt="Printed blind of a garlanded goddess for a home mandir" /><figcaption>Printed · Mandir</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-linen-sitout-wide.jpg" alt="Two linen roller blinds over a sit-out window with plants" /><figcaption>Roller · Linen</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="600" loading="lazy" src="assets/work/800/roller-damask-bedroom.jpg" alt="Grey damask-patterned roller blind behind a bed" /><figcaption>Roller · Damask</figcaption></figure>
-          <figure data-cat="printed"><img width="600" height="800" loading="lazy" src="assets/work/800/printed-temple.jpg" alt="Printed blind of a white temple with Gujarati verse" /><figcaption>Printed · Temple</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-grey-living.jpg" alt="Pair of grey roller blinds behind a floral sofa" /><figcaption>Roller · Grey weave</figcaption></figure>
-          <figure data-cat="printed"><img width="451" height="800" loading="lazy" src="assets/work/800/printed-mandir-swaminarayan.jpg" alt="Printed blind inside a carved wooden mandir" /><figcaption>Printed · Mandir</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-sand-kids-room.jpg" alt="Sand-coloured roller blind in a kids' study" /><figcaption>Roller · Sand</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-linen-bedroom.jpg" alt="Linen roller blind beside a padded headboard" /><figcaption>Roller · Linen</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-grey-study.jpg" alt="Grey roller blind over a home-office desk" /><figcaption>Roller · Grey</figcaption></figure>
-          <figure data-cat="roller"><img width="600" height="800" loading="lazy" src="assets/work/800/roller-sand-office.jpg" alt="Full-height sand roller blind in an office" /><figcaption>Roller · Sand</figcaption></figure>
-          <figure data-cat="roller"><img width="451" height="800" loading="lazy" src="assets/work/800/roller-grey-hall.jpg" alt="Tall grey roller blind next to an aquarium" /><figcaption>Roller · Grey</figcaption></figure>
-          <figure data-cat="wood"><img width="600" height="800" loading="lazy" src="assets/gallery/wooden-blinds.jpg" alt="Dark wooden venetian blind on a tall window" /><figcaption>Wooden</figcaption></figure>
-          <figure data-cat="zebra"><img width="800" height="369" loading="lazy" src="assets/gallery/zebra-blinds.jpg" alt="Grey zebra blind on a small window" /><figcaption>Zebra</figcaption></figure>
-          <figure data-cat="wood"><img width="800" height="450" loading="lazy" src="assets/gallery/wooden-blinds-2.jpg" alt="Wooden venetian blinds in a home gym" /><figcaption>Wooden</figcaption></figure>
-          <figure data-cat="zebra"><img width="800" height="369" loading="lazy" src="assets/gallery/zebra-blinds-1.jpg" alt="White zebra blind in a recessed window" /><figcaption>Zebra</figcaption></figure>
-          <figure data-cat="printed"><img width="800" height="369" loading="lazy" src="assets/gallery/printed-roller-blinds.jpg" alt="Grey patterned printed roller blind" /><figcaption>Printed roller</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="600" loading="lazy" src="assets/gallery/black-out-blinds-2.jpg" alt="White blackout roller blinds either side of a cabinet" /><figcaption>Blackout</figcaption></figure>
-          <figure data-cat="wood"><img width="800" height="369" loading="lazy" src="assets/gallery/roller-jut-blinds-2.jpg" alt="Row of jute roller blinds in a sitting room" /><figcaption>Jute</figcaption></figure>
-          <figure data-cat="other"><img width="800" height="450" loading="lazy" src="assets/gallery/vertical-blinds.jpg" alt="White vertical blinds in an office" /><figcaption>Vertical</figcaption></figure>
-          <figure data-cat="other"><img width="800" height="600" loading="lazy" src="assets/gallery/monsoon-blinds.jpg" alt="Transparent PVC monsoon blinds on an office balcony" /><figcaption>Monsoon</figcaption></figure>
-          <figure data-cat="zebra"><img width="800" height="600" loading="lazy" src="assets/gallery/zebra-blinds-2.jpg" alt="Beige zebra blind in a wooden window frame" /><figcaption>Zebra</figcaption></figure>
-          <figure data-cat="other"><img width="800" height="400" loading="lazy" src="assets/gallery/roller-vertical-1.jpg" alt="Cream vertical blinds beside framed certificates" /><figcaption>Vertical</figcaption></figure>
-          <figure data-cat="other"><img width="600" height="800" loading="lazy" src="assets/gallery/glass-flims-printed.jpg" alt="Frosted printed glass film with a firm's logo on an office door" /><figcaption>Glass film</figcaption></figure>
-          <figure data-cat="wood"><img width="800" height="600" loading="lazy" src="assets/gallery/PVC-chick-blinds.jpg" alt="PVC chick blinds on an office window" /><figcaption>Chick blinds</figcaption></figure>
-          <figure data-cat="other"><img width="450" height="800" loading="lazy" src="assets/gallery/vanishing-blinds.jpg" alt="Vanishing blinds on a tall office window" /><figcaption>Vanishing</figcaption></figure>
-          <figure data-cat="other"><img width="800" height="600" loading="lazy" src="assets/gallery/monsoon-blinds-1.jpg" alt="Clear monsoon blinds closing off a balcony" /><figcaption>Monsoon</figcaption></figure>
-          <figure data-cat="roller"><img width="800" height="450" loading="lazy" src="assets/gallery/roller-plated-blinds.jpg" alt="Dark pleated roller blinds in a living room" /><figcaption>Pleated</figcaption></figure>
-          <figure data-cat="other"><img width="800" height="450" loading="lazy" src="assets/gallery/industrial-blinds.jpg" alt="Coloured industrial PVC strip curtains" /><figcaption>Industrial</figcaption></figure>
+          <figure data-cat="printed"><img width="600" height="800" loading="lazy" src="assets/work/800/printed-mataji.webp" srcset="assets/work/800/printed-mataji-sm.webp 300w, assets/work/800/printed-mataji.webp 600w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Printed blind of a garlanded goddess for a home mandir" /><figcaption>Printed · Mandir</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-linen-sitout-wide.webp" srcset="assets/work/800/roller-linen-sitout-wide-sm.webp 400w, assets/work/800/roller-linen-sitout-wide.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Two linen roller blinds over a sit-out window with plants" /><figcaption>Roller · Linen</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="600" loading="lazy" src="assets/work/800/roller-damask-bedroom.webp" srcset="assets/work/800/roller-damask-bedroom-sm.webp 400w, assets/work/800/roller-damask-bedroom.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Grey damask-patterned roller blind behind a bed" /><figcaption>Roller · Damask</figcaption></figure>
+          <figure data-cat="printed"><img width="600" height="800" loading="lazy" src="assets/work/800/printed-temple.webp" srcset="assets/work/800/printed-temple-sm.webp 300w, assets/work/800/printed-temple.webp 600w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Printed blind of a white temple with Gujarati verse" /><figcaption>Printed · Temple</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-grey-living.webp" srcset="assets/work/800/roller-grey-living-sm.webp 400w, assets/work/800/roller-grey-living.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Pair of grey roller blinds behind a floral sofa" /><figcaption>Roller · Grey weave</figcaption></figure>
+          <figure data-cat="printed"><img width="451" height="800" loading="lazy" src="assets/work/800/printed-mandir-swaminarayan.webp" srcset="assets/work/800/printed-mandir-swaminarayan-sm.webp 225w, assets/work/800/printed-mandir-swaminarayan.webp 451w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Printed blind inside a carved wooden mandir" /><figcaption>Printed · Mandir</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-sand-kids-room.webp" srcset="assets/work/800/roller-sand-kids-room-sm.webp 400w, assets/work/800/roller-sand-kids-room.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Sand-coloured roller blind in a kids' study" /><figcaption>Roller · Sand</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-linen-bedroom.webp" srcset="assets/work/800/roller-linen-bedroom-sm.webp 400w, assets/work/800/roller-linen-bedroom.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Linen roller blind beside a padded headboard" /><figcaption>Roller · Linen</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="451" loading="lazy" src="assets/work/800/roller-grey-study.webp" srcset="assets/work/800/roller-grey-study-sm.webp 400w, assets/work/800/roller-grey-study.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Grey roller blind over a home-office desk" /><figcaption>Roller · Grey</figcaption></figure>
+          <figure data-cat="roller"><img width="600" height="800" loading="lazy" src="assets/work/800/roller-sand-office.webp" srcset="assets/work/800/roller-sand-office-sm.webp 300w, assets/work/800/roller-sand-office.webp 600w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Full-height sand roller blind in an office" /><figcaption>Roller · Sand</figcaption></figure>
+          <figure data-cat="roller"><img width="451" height="800" loading="lazy" src="assets/work/800/roller-grey-hall.webp" srcset="assets/work/800/roller-grey-hall-sm.webp 225w, assets/work/800/roller-grey-hall.webp 451w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Tall grey roller blind next to an aquarium" /><figcaption>Roller · Grey</figcaption></figure>
+          <figure data-cat="wood"><img width="600" height="800" loading="lazy" src="assets/gallery/wooden-blinds.webp" srcset="assets/gallery/wooden-blinds-sm.webp 300w, assets/gallery/wooden-blinds.webp 600w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Dark wooden venetian blind on a tall window" /><figcaption>Wooden</figcaption></figure>
+          <figure data-cat="zebra"><img width="800" height="369" loading="lazy" src="assets/gallery/zebra-blinds.webp" srcset="assets/gallery/zebra-blinds-sm.webp 400w, assets/gallery/zebra-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Grey zebra blind on a small window" /><figcaption>Zebra</figcaption></figure>
+          <figure data-cat="wood"><img width="800" height="450" loading="lazy" src="assets/gallery/wooden-blinds-2.webp" srcset="assets/gallery/wooden-blinds-2-sm.webp 400w, assets/gallery/wooden-blinds-2.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Wooden venetian blinds in a home gym" /><figcaption>Wooden</figcaption></figure>
+          <figure data-cat="zebra"><img width="800" height="369" loading="lazy" src="assets/gallery/zebra-blinds-1.webp" srcset="assets/gallery/zebra-blinds-1-sm.webp 400w, assets/gallery/zebra-blinds-1.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="White zebra blind in a recessed window" /><figcaption>Zebra</figcaption></figure>
+          <figure data-cat="printed"><img width="800" height="369" loading="lazy" src="assets/gallery/printed-roller-blinds.webp" srcset="assets/gallery/printed-roller-blinds-sm.webp 400w, assets/gallery/printed-roller-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Grey patterned printed roller blind" /><figcaption>Printed roller</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="600" loading="lazy" src="assets/gallery/black-out-blinds-2.webp" srcset="assets/gallery/black-out-blinds-2-sm.webp 400w, assets/gallery/black-out-blinds-2.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="White blackout roller blinds either side of a cabinet" /><figcaption>Blackout</figcaption></figure>
+          <figure data-cat="wood"><img width="800" height="369" loading="lazy" src="assets/gallery/roller-jut-blinds-2.webp" srcset="assets/gallery/roller-jut-blinds-2-sm.webp 400w, assets/gallery/roller-jut-blinds-2.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Row of jute roller blinds in a sitting room" /><figcaption>Jute</figcaption></figure>
+          <figure data-cat="other"><img width="800" height="450" loading="lazy" src="assets/gallery/vertical-blinds.webp" srcset="assets/gallery/vertical-blinds-sm.webp 400w, assets/gallery/vertical-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="White vertical blinds in an office" /><figcaption>Vertical</figcaption></figure>
+          <figure data-cat="other"><img width="800" height="600" loading="lazy" src="assets/gallery/monsoon-blinds.webp" srcset="assets/gallery/monsoon-blinds-sm.webp 400w, assets/gallery/monsoon-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Transparent PVC monsoon blinds on an office balcony" /><figcaption>Monsoon</figcaption></figure>
+          <figure data-cat="zebra"><img width="800" height="600" loading="lazy" src="assets/gallery/zebra-blinds-2.webp" srcset="assets/gallery/zebra-blinds-2-sm.webp 400w, assets/gallery/zebra-blinds-2.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Beige zebra blind in a wooden window frame" /><figcaption>Zebra</figcaption></figure>
+          <figure data-cat="other"><img width="800" height="400" loading="lazy" src="assets/gallery/roller-vertical-1.webp" srcset="assets/gallery/roller-vertical-1-sm.webp 400w, assets/gallery/roller-vertical-1.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Cream vertical blinds beside framed certificates" /><figcaption>Vertical</figcaption></figure>
+          <figure data-cat="other"><img width="600" height="800" loading="lazy" src="assets/gallery/glass-flims-printed.webp" srcset="assets/gallery/glass-flims-printed-sm.webp 300w, assets/gallery/glass-flims-printed.webp 600w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Frosted printed glass film with a firm's logo on an office door" /><figcaption>Glass film</figcaption></figure>
+          <figure data-cat="wood"><img width="800" height="600" loading="lazy" src="assets/gallery/PVC-chick-blinds.webp" srcset="assets/gallery/PVC-chick-blinds-sm.webp 400w, assets/gallery/PVC-chick-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="PVC chick blinds on an office window" /><figcaption>Chick blinds</figcaption></figure>
+          <figure data-cat="other"><img width="450" height="800" loading="lazy" src="assets/gallery/vanishing-blinds.webp" srcset="assets/gallery/vanishing-blinds-sm.webp 225w, assets/gallery/vanishing-blinds.webp 450w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Vanishing blinds on a tall office window" /><figcaption>Vanishing</figcaption></figure>
+          <figure data-cat="other"><img width="800" height="600" loading="lazy" src="assets/gallery/monsoon-blinds-1.webp" srcset="assets/gallery/monsoon-blinds-1-sm.webp 400w, assets/gallery/monsoon-blinds-1.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Clear monsoon blinds closing off a balcony" /><figcaption>Monsoon</figcaption></figure>
+          <figure data-cat="roller"><img width="800" height="450" loading="lazy" src="assets/gallery/roller-plated-blinds.webp" srcset="assets/gallery/roller-plated-blinds-sm.webp 400w, assets/gallery/roller-plated-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Dark pleated roller blinds in a living room" /><figcaption>Pleated</figcaption></figure>
+          <figure data-cat="other"><img width="800" height="450" loading="lazy" src="assets/gallery/industrial-blinds.webp" srcset="assets/gallery/industrial-blinds-sm.webp 400w, assets/gallery/industrial-blinds.webp 800w" sizes="(max-width: 520px) 50vw, (max-width: 960px) 33vw, 25vw" alt="Coloured industrial PVC strip curtains" /><figcaption>Industrial</figcaption></figure>
         </div>
       </section>
 
